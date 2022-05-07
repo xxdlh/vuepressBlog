@@ -12,12 +12,12 @@ let SuffixIncludes = ['md', 'html']
 let sidebar = sideBarTool.genSideBarGroup(rootPath, unDirIncludes, SuffixIncludes, {})
 module.exports = {
   // 网站的一些基本配置
-  // base:配置部署站点的基础路径
   title: '星星的泪痕', // 网站的标题
   description: '知识记录', // 网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中。
   head: [
     ['link', { rel: 'icon', href: '/logo.jpg' }] // 需要被注入到当前页面的 HTML <head> 中的标签
   ],
+  base: '/', // 这是部署到github相关的配置
   plugins: [
     [
       "@vuepress-reco/vuepress-plugin-bgm-player", {
